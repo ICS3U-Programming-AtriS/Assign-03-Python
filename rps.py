@@ -29,7 +29,7 @@ First to 3 points wins!"""
         user_pick = ""
         # Initialize program_pick as a string value
         program_pick = ""
-        if user_points < 2:
+        if user_points >= 2:
             # Get user's pick
             user_pick = util.option_input("Rock/Paper/Scissors?", choices)
             if user_pick == "ROCK":
@@ -84,7 +84,8 @@ First to 3 points wins!"""
             break
 
         # Display user_points and program_points
-        
+        print(f"Your points: {user_points}")
+        print(f"Barbable's points: {program_points}")
 
 
 
