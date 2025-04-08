@@ -77,8 +77,9 @@ def main():
             if guess in word:
                 word_list.remove(word)
         print("Unfortunately, you guessed wrong! You lose a life!")
-
-    print(f"The correct word was {random.choice(word_list)}")
+    
+    util.purple("You ran out of lives!")
+    util.purple(f"The correct word was {random.choice(word_list)}")
 
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ First to 3 points wins!"""
         program_pick = ""
         if user_points >= 2:
             # Get user's pick
-            user_pick = util.option_input("Rock/Paper/Scissors?", choices)
+            user_pick = util.option_input("Rock/Paper/Scissors? ", choices)
             if user_pick == "ROCK":
                 # program pick is now either "ROCK" or "PAPER"
                 program_pick = random.choice(["ROCK", "PAPER"])
@@ -44,7 +44,7 @@ First to 3 points wins!"""
                 program_pick = random.choice(["SCISSORS", "ROCK"])
         else:
             # Get user's pick
-            user_pick = util.option_input("Rock/Paper/Scissors?", choices)
+            user_pick = util.option_input("Rock/Paper/Scissors? ", choices)
             # Select a random pick for the program
             program_pick = random.choice(choices)
         
@@ -80,7 +80,7 @@ First to 3 points wins!"""
                 else:
                     print("DRAW!")
         if program_points >= 3:
-            print("Unfortunate, you lost the set!")
+            util.purple("Unfortunate, you lost the set!")
             break
 
         # Display user_points and program_points
