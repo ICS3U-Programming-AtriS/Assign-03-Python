@@ -15,9 +15,10 @@ def main():
         # Convert the user's guess to an integer
         user_num = int(user_input)
 
+        # Check if user's guess is within the guessing boundaries
         if 0 <= user_num <= 9:
             # Generate a random number between 0 and 9, excluding the user's guess
-            correct_num = user_num + random.randint(-user_num, 9-user_num)
+            correct_num = (user_num + random.randint(1, 9)) % 10
 
             # Tell the user that they guessed wrong
             # Also tell them the correct answer

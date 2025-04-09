@@ -13,7 +13,7 @@ def main():
         """Welcome to rock paper scissors.
 Rock beats paper,
 paper beats scissors,
- and scissors beats rock.
+and scissors beats rock.
 You will be playing Barbable
 from Liechtenstein!
 First to 3 points wins!"""
@@ -29,9 +29,13 @@ First to 3 points wins!"""
         user_pick = ""
         # Initialize program_pick as a string value
         program_pick = ""
+        # Check if user is 1 point away from winning
         if user_points >= 2:
             # Get user's pick
             user_pick = util.option_input("Rock/Paper/Scissors? ", choices)
+
+            # Set Program pick such that it always results in either
+            # a draw or a loss
             if user_pick == "ROCK":
                 # program pick is now either "ROCK" or "PAPER"
                 program_pick = random.choice(["ROCK", "PAPER"])
@@ -48,42 +52,55 @@ First to 3 points wins!"""
             # Select a random pick for the program
             program_pick = random.choice(choices)
         
+        # Match the choice pairs with their given outcome
+        # Also award points
         match user_pick:
             case "ROCK":
+                # Rock draws with Rock
                 if program_pick == "ROCK":
                     print("DRAW!")
+                # Rock loses to Paper
                 elif program_pick == "PAPER":
                     print("LOSS!")
                     program_points += 1
                 # If it's not ROCK or PAPER, it must be SCISSORS
+                # Rock beats scissors
                 else:
                     print("WIN!")
                     user_points += 1
             case "PAPER":
+                # Paper beats Rock
                 if program_pick == "ROCK":
                     print("WIN!")
                     user_points += 1
+                # Paper draws with Paper
                 elif program_pick == "PAPER":
                     print("DRAW!")
                 # If it's not ROCK or PAPER, it must be SCISSORS
+                # Paper loses to Scissors
                 else:
                     print("LOSS!")
                     program_points += 1
             case "SCISSORS":
+                # Scissors loses to Rock
                 if program_pick == "ROCK":
                     print("LOSS!")
                     program_points += 1
+                # Scissors beats Paper
                 elif program_pick == "PAPER":
                     print("WIN!")
                     user_points += 1
                 # If it's not ROCK or PAPER, it must be SCISSORS
+                # Scissors draws with Scissors
                 else:
                     print("DRAW!")
+        # End the game once program reaches 3 points
         if program_points >= 3:
             util.purple("Unfortunate, you lost the set!")
             break
 
-        # Display user_points and program_points
+        # Display the score
+        # at the end of every round
         print(f"Your points: {user_points}")
         print(f"Barbable's points: {program_points}")
 

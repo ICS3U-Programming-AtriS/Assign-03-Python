@@ -11,9 +11,11 @@ def main():
     guess = util.option_input("Heads/Tails? ", ["HEADS", "TAILS"])
 
     if guess == "HEADS":
+        # If the user guessed "HEADS", the result is "TAILS"
         util.purple("The coin was tails, unfortunately.")
     # If guess is not "HEADS", it must be "TAILS"
     else:
+        # If the user guessed "TAILS", the result is "HEADS"
         util.purple("The coin was heads, unfortunately.")
 
 
