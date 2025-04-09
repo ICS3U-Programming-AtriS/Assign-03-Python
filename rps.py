@@ -51,7 +51,7 @@ First to 3 points wins!"""
             user_pick = util.option_input("Rock/Paper/Scissors? ", choices)
             # Select a random pick for the program
             program_pick = random.choice(choices)
-        
+
         # Match the choice pairs with their given outcome
         # Also award points
         match user_pick:
@@ -96,14 +96,14 @@ First to 3 points wins!"""
                     print("DRAW!")
         # End the game once program reaches 3 points
         if program_points >= 3:
-            util.purple("Unfortunate, you lost the set!")
+            util.purple("You lost the set!")
+            util.purple("Barbable spits in your face!")
             break
 
         # Display the score
         # at the end of every round
         print(f"Your points: {user_points}")
         print(f"Barbable's points: {program_points}")
-
 
 
 if __name__ == "__main__":

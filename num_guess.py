@@ -6,6 +6,7 @@
 import random
 import util
 
+
 def main():
     # Get the user's guess as a string
     util.cyan("Enter a number (0-9): ", False)

@@ -5,6 +5,7 @@
 
 import util
 
+
 def main():
     # Get user's guess for whether a coin will result in
     # "HEADS" or "TAILS"
@@ -17,7 +18,6 @@ def main():
     else:
         # If the user guessed "TAILS", the result is "HEADS"
         util.purple("The coin was heads, unfortunately.")
-
 
 
 if __name__ == "__main__":

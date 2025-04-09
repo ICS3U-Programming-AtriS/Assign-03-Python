@@ -4,14 +4,15 @@
 # This module contains utility functions
 
 # TERMINAL COLOR SEQUENCES
-BLACK = "\033[0;30m"        # Black
-RED = "\033[0;31m"          # Red
-GREEN = "\033[0;32m"        # Green
-YELLOW = "\033[0;33m"       # Yellow
-BLUE = "\033[0;34m"         # Blue
-PURPLE = "\033[0;35m"       # Purple
-CYAN = "\033[0;36m"         # Cyan
-WHITE = "\033[0;37m"        # White [DEFAULT]
+BLACK = "\033[0;30m"  # Black
+RED = "\033[0;31m"  # Red
+GREEN = "\033[0;32m"  # Green
+YELLOW = "\033[0;33m"  # Yellow
+BLUE = "\033[0;34m"  # Blue
+PURPLE = "\033[0;35m"  # Purple
+CYAN = "\033[0;36m"  # Cyan
+WHITE = "\033[0;37m"  # White [DEFAULT]
+
 
 # Function for handling input
 def option_input(prompt: str, options: list):
@@ -28,8 +29,9 @@ def option_input(prompt: str, options: list):
         else:
             red(f"Please enter a valid option from the list")
 
+
 # print() but it's red
-def red(msg: str, newline = True):
+def red(msg: str, newline=True):
     # Set the color
     print(RED, end="")
     # Print Message
@@ -40,8 +42,9 @@ def red(msg: str, newline = True):
     # Reset Color back to default
     print(WHITE, end="")
 
+
 # print() but it's blue
-def blue(msg: str, newline = True):
+def blue(msg: str, newline=True):
     # Set the color
     print(BLUE, end="")
     # Print Message
@@ -52,8 +55,9 @@ def blue(msg: str, newline = True):
     # Reset Color back to default
     print(WHITE, end="")
 
+
 # print() but it's cyan
-def cyan(msg: str, newline = True):
+def cyan(msg: str, newline=True):
     # Set the color
     print(CYAN, end="")
     # Print Message
@@ -64,8 +68,9 @@ def cyan(msg: str, newline = True):
     # Reset Color back to default
     print(WHITE, end="")
 
+
 # print() but it's purple
-def purple(msg: str, newline = True):
+def purple(msg: str, newline=True):
     # Set the color
     print(PURPLE, end="")
     # Print Message
@@ -76,8 +81,9 @@ def purple(msg: str, newline = True):
     # Reset Color back to default
     print(WHITE, end="")
 
+
 # print() but it's yellow
-def yellow(msg: str, newline = True):
+def yellow(msg: str, newline=True):
     # Set the color
     print(YELLOW, end="")
     # Print Message
@@ -88,9 +94,11 @@ def yellow(msg: str, newline = True):
     # Reset Color back to default
     print(WHITE, end="")
 
+
 # Prints a string that divides the terminal output
 def line_break():
     yellow("#~#~#~#~#~#~#~#~#~#~#")
+
 
 # LIST OF ALL LETTERS
 # I could also do [char for char in "ABCD..."]

@@ -81,7 +81,7 @@ def main():
         guessed_letters.append(guess)
 
         # At the end of every round:
-        # Remove all words from the word list, 
+        # Remove all words from the word list,
         # that contain the user's guessed letter
         # [ Loop through all words in the word list ]
         # [:] creates a copy of the list
@@ -94,7 +94,7 @@ def main():
                 word_list.remove(word)
         # Tell the user that they guessed wrong
         print("Unfortunately, you guessed wrong! You lose a life!")
-    
+
     # Tell the user they lost
     util.purple("You ran out of lives!")
     # Use a random word from the surviving word list

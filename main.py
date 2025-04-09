@@ -9,6 +9,7 @@ import hangman
 import num_guess
 import rps
 
+
 def main():
     # Introduction message
     print("Welcome to THE CASINO!")
@@ -20,7 +21,7 @@ def main():
     while True:
         # Ask user what game they want to play
         selected_game = util.option_input("What Game do you want to play?: ", game_list)
-        
+
         # Line Separation Effect
         util.line_break()
 
@@ -47,7 +48,6 @@ def main():
                 break
         # Line Separation Effect
         util.line_break()
-
 
 
 if __name__ == "__main__":
