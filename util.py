@@ -21,10 +21,14 @@ def option_input(prompt: str, options: list):
         # Display prompt
         cyan(prompt, newline=False)
         choice = input()
+        # Check if the choice is in options
+        # using .upper() to ensure case-insensitivity
         if choice.upper() in options:
             line_break()
+            # Return the selected choice
             return choice.upper()
         else:
+            # Invalid Input
             red("Please enter a valid option from the list")
 
 
