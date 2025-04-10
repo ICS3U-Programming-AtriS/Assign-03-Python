@@ -24,6 +24,7 @@ First to 3 points wins!"""
     program_points = 0
     # Initialize list for choices
     choices = ["ROCK", "PAPER", "SCISSORS"]
+    # Game Loop for rounds
     while True:
         # Initialize user_pick as a string value
         user_pick = ""
@@ -52,8 +53,8 @@ First to 3 points wins!"""
             # Select a random pick for the program
             program_pick = random.choice(choices)
 
-        # Match the choice pairs with their given outcome
-        # Also award points
+        # Evaluate the result of the round
+        # and award points
         match user_pick:
             case "ROCK":
                 # Rock draws with Rock

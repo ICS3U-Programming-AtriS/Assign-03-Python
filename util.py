@@ -4,9 +4,7 @@
 # This module contains utility functions
 
 # TERMINAL COLOR SEQUENCES
-BLACK = "\033[0;30m"  # Black
 RED = "\033[0;31m"  # Red
-GREEN = "\033[0;32m"  # Green
 YELLOW = "\033[0;33m"  # Yellow
 BLUE = "\033[0;34m"  # Blue
 PURPLE = "\033[0;35m"  # Purple
@@ -27,7 +25,7 @@ def option_input(prompt: str, options: list):
             line_break()
             return choice.upper()
         else:
-            red(f"Please enter a valid option from the list")
+            red("Please enter a valid option from the list")
 
 
 # print() but it's red
@@ -37,7 +35,7 @@ def red(msg: str, newline=True):
     # Print Message
     print(msg, end="")
     # Add newline if newline == True
-    if newline == True:
+    if newline:
         print()
     # Reset Color back to default
     print(WHITE, end="")
@@ -50,7 +48,7 @@ def blue(msg: str, newline=True):
     # Print Message
     print(msg, end="")
     # Add newline if newline == True
-    if newline == True:
+    if newline:
         print()
     # Reset Color back to default
     print(WHITE, end="")
@@ -63,7 +61,7 @@ def cyan(msg: str, newline=True):
     # Print Message
     print(msg, end="")
     # Add newline if newline == True
-    if newline == True:
+    if newline:
         print()
     # Reset Color back to default
     print(WHITE, end="")
@@ -76,7 +74,7 @@ def purple(msg: str, newline=True):
     # Print Message
     print(msg, end="")
     # Add newline if newline == True
-    if newline == True:
+    if newline:
         print()
     # Reset Color back to default
     print(WHITE, end="")
@@ -89,7 +87,7 @@ def yellow(msg: str, newline=True):
     # Print Message
     print(msg, end="")
     # Add newline if newline == True
-    if newline == True:
+    if newline:
         print()
     # Reset Color back to default
     print(WHITE, end="")

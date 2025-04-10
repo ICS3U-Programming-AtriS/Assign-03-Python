@@ -66,7 +66,7 @@ def main():
         # Shows all previously guessed letters
         print(f"Guessed letters : {" ".join(guessed_letters)}")
         # This message will always stay the same
-        print(f"Word [3 letters left] : _ _ _")
+        print("Word [3 letters left] : _ _ _")
 
         # Filter out guessed letters from ALPHABET_LIST
         # Basically remaining_options will become a list
@@ -99,7 +99,7 @@ def main():
     util.purple("You ran out of lives!")
     # Use a random word from the surviving word list
     # as the correct word
-    util.purple(f"The correct word was {random.choice(word_list)}")
+    util.purple(f"The correct word was {random.choice(word_list)}.")
 
 
 if __name__ == "__main__":
